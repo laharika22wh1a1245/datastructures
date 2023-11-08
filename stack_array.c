@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define MAX_SIZE[5]
+#define MAX_SIZE 5
 int stack[MAX_SIZE];
 
 int top=-1;
@@ -43,6 +43,25 @@ int display_stack()
 if(isempty())
 printf("list is empty");
 else
+{
+	for(int i=0;i<=top;i++)
+	printf("%d",stack[i]);
+}
+}
+
+int main()
+{
+	push(10);
+	push(20);
+	push(30);
+	push(40);
+	printf("initial values");
+	display_stack();
+	pop();
+	pop();
+	printf("after pop opertions");
+	display_stack();
+}
 
 
 
